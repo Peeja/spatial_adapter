@@ -11,6 +11,14 @@ At the root of your Rails project, type :
        script\plugin install svn://rubyforge.org/var/svn/georuby/SpatialAdapter/trunk/spatial_adapter
 You need to have SVN installed.
 	
+====== PostGIS SQL Scripts
+This is only for PostgreSQL databases:
+
+Place the following scripts in a folder named 'spatial' under the 'db' folder; For example:
+  RAILS_ROOT/db/spatial/lwpostgis.sql
+  RAILS_ROOT/db/spatial/spatial_ref_sys
+  
+These will be used when creating the Test database when running the Rake Test tasks.  These scripts should have been installed when the PostGIS libraries were installed.  Online reference: http://postgis.refractions.net/
 
 ===Operations
 Geometric columns in your ActiveRecord models now appear just like any other column of other basic data types. They can also be dumped in ruby schema mode and loaded in migrations the same way as columns of basic types.
