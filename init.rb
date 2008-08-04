@@ -7,8 +7,6 @@ when 'MySQL'
   require 'mysql_spatial_adapter'
 when 'PostgreSQL'
   require 'post_gis_adapter'
- else
+else
   raise SpatialAdapterNotCompatibleError.new("Only MySQL and PostgreSQL are currently supported by the spatial adapter plugin.")
- end
-
-
+end
